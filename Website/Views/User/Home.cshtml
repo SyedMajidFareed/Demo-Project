@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome <b>@ViewBag.Name </b> </h1>
+    
+</div>
+<div class = "table-responsive" >
+<table class="table table-dark table-striped table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Username</th>
+      <th scope="col">Password</th>
+      </tr>
+  </thead>
+  <tbody>
+      @foreach(Website.Models.User u in Model)
+        {
+            <tr>
+     
+      <td>   @u.Username   </td>
+      <td>   @u.Password   </td>
+
+        </tr>
+        }
+        
+   
+  </tbody>
+</table>
+</div>
